@@ -12,3 +12,4 @@ Hover effect for mouse
 
 Clear grid on button click
 ### Divide and Conquer
+Try to create the grid first and have it be responsive to the user's size request.
