@@ -36,6 +36,12 @@ function colourSquare(e) {
 }
 
 function clearGrid () {
+    let newSize = prompt("Number of squares per side for the new grid.");
+    if (newSize > 100) newSize = 100;
+    if (newSize < 1) newSize = 1;
+
     const squares = document.querySelectorAll('.square');
     squares.forEach(square => square.classList.remove('coloured-square'));
+    
+    generateGrid(newSize);
 }
