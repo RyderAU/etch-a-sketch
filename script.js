@@ -9,8 +9,12 @@ generateGrid(gridSize);
 
 function generateGrid(gridSize) {
     const container = document.querySelector('#container');
-    container.style.gridTemplateColumns = `repeat(${gridSize}, 20px)`;
-    container.style.gridTemplateRows = `repeat(${gridSize}, 20px)`;
+
+    // remove child elements
+    container.innerHTML = '';
+
+    container.style.gridTemplateColumns = `repeat(${gridSize}, auto)`;
+    container.style.gridTemplateRows = `repeat(${gridSize}, auto)`;
 
     for (let i = 0 ; i < Math.pow(gridSize, 2) ; i++) {
         const div = document.createElement('div');
